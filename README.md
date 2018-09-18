@@ -18,6 +18,9 @@ $ cd linux-path-traversal
 ### Instructions
 > Run following commands to create log folder.
 > Log configuration can be changed from *logging_config.yaml* file.
+> */var/log/traversal/debug.log*  
+> */var/log/traversal/warn.log*  
+> */var/log/traversal/all.log*
 ```sh
 sudo mkdir -p /var/log/traversal
 sudo chown username:username /var/log/traversal
@@ -31,32 +34,29 @@ Above command gives an interface to run commands in session. User CTRL+C to kill
 *Note* that application keeps data in memory and killing sessionwill delete all data stored in memory.
 
 ### Example
-```sh
-mkdir India
-```
-- *mkdir India*
+- *mkdir India*  
 SUCC: REACHED
-- *mkdir Delhi*
+- *mkdir Delhi*  
 SUCC: CREATED
-- *mkdir Mumbai*
+- *mkdir Mumbai*  
 SUCC: CREATED
-- *ls*
+- *ls*  
 DIRS: Delhi Mumbai
-- *pwd*
+- *pwd*  
 PATH: /India/Delhi
-- *cd /India*
+- *cd /India*  
 SUCC: REACHED
-- *rm Delhi*
+- *rm Delhi*  
 SUCC: DELETED
-- *rm /India/Mumbai*
+- *rm /India/Mumbai*  
 SUCC: DELETED
-- *cd /*
+- *cd /*  
 SUCC: REACHED
-- *ls*
+- *ls*  
 DIRS: India
-- *session clear*
+- *session clear*  
 SUCC: RESET TO HOME!
-- *^C*
+- *^C*  
 Good bye!
 
 # To add new commands
