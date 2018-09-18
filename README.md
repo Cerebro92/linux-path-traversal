@@ -3,7 +3,7 @@
 Linux path traversal is tool to create unix like virtual file system and roam around in this structure.
 
   - Supports all basic unix commands
-  - Keeps directories in memory
+  - Keeps directories information in memory
   - Logs out result on console as well as in file
 
 
@@ -21,6 +21,7 @@ $ cd linux-path-traversal
 > */var/log/traversal/debug.log*  
 > */var/log/traversal/warn.log*  
 > */var/log/traversal/all.log*
+
 ```sh
 sudo mkdir -p /var/log/traversal
 sudo chown username:username /var/log/traversal
@@ -30,8 +31,8 @@ sudo chown username:username /var/log/traversal
 ```sh
 python traversal
 ```
-Above command gives an interface to run commands in session. User CTRL+C to kill session.
-*Note* that application keeps data in memory and killing sessionwill delete all data stored in memory.
+This command gives an interface to run subsequent commands in session. Use CTRL+C to kill session.
+*Note* that application keeps data in memory and killing session will delete all data stored in memory.
 
 ### Example
 - *mkdir India*  
@@ -63,6 +64,7 @@ Good bye!
 If you want to add more commands to this tool, create a file name under *traversal/cmds* folder with command name. Create a class with filename <Command name in CAPS>Command in it. and you are ready to go!
 
 ### Todos
+ - Add more logs
  - Add support of keeping files as well.
  -  Persist data this on disk to avoid failover.
  - Store timezone-aware time in created_at field.
